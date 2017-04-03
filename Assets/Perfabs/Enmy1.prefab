@@ -108,6 +108,8 @@ MonoBehaviour:
     m_Bits: 256
   moveTime: 0.1
   enmyDmg: 1
+  enmyAttack1: {fileID: 8300000, guid: 0db8cac2749584a009540aa5671ee80d, type: 3}
+  enmyAttack2: {fileID: 8300000, guid: 114514a3b3697484ebaa08f7fbf842d3, type: 3}
 --- !u!212 &212000012486447492
 SpriteRenderer:
   m_ObjectHideFlags: 1

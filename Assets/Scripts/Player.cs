@@ -9,6 +9,14 @@ public class Player : MovingObject {
 	private Animator animator;
 	public float currentFood;
 
+	public AudioClip playerMove1;
+	public AudioClip playerMove2;
+	public AudioClip eatClip1;
+	public AudioClip eatClip2;
+	public AudioClip drinkClip1;
+	public AudioClip drinkClip2;
+	public AudioClip playerDie;
+
 
 	// Use this for initialization
 	public override void Start () {
@@ -46,6 +54,7 @@ public class Player : MovingObject {
 		Wall wall = componet as Wall;
 		wall.WallGetDmg (playerDmg);
 		animator.SetTrigger ("playerHit");
+
 	}
 
 	public override void AttempMove<T> (int x, int y)
@@ -53,6 +62,8 @@ public class Player : MovingObject {
 		base.AttempMove<T> (x, y);
 		GameManager.instance.playersTurn = false;
 		GameManager.instance.playerCurrentPosition = transform;
+
+		SoundManager.instance.PlayRandomClip (playerMove1,playerMove2);
 	}
 
 	public void GetHurt(int dmg){

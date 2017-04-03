@@ -8,6 +8,9 @@ public class Enmy : MovingObject {
 	private Transform target;
 	private bool skip;
 
+	public AudioClip enmyAttack1;
+	public AudioClip enmyAttack2;
+
 	// Use this for initialization
 	public override void Start () {
 		GameManager.instance.AddEnmy(this);
@@ -51,5 +54,6 @@ public class Enmy : MovingObject {
 		animator.SetTrigger ("enmyHit");
 		player.GetHurt (enmyDmg);
 
+		SoundManager.instance.PlayRandomClip (enmyAttack1, enmyAttack2);
 	}
 }

@@ -69,6 +69,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hurtSprite: {fileID: 21300106, guid: fbe1e7b94bb1a4a099d5bcb15a00141c, type: 3}
   wallHp: 4
+  wallHurtClip1: {fileID: 8300000, guid: 4c2332bc8245b474dad63074059bb755, type: 3}
+  wallHurtClip2: {fileID: 8300000, guid: f6aaac83be9e0493493aace800b76619, type: 3}
 --- !u!212 &212000011942471472
 SpriteRenderer:
   m_ObjectHideFlags: 1

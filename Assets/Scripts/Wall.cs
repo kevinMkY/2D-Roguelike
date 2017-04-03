@@ -7,6 +7,9 @@ public class Wall : MonoBehaviour {
 	public int wallHp = 4;
 	private SpriteRenderer render;
 
+	public AudioClip wallHurtClip1;
+	public AudioClip wallHurtClip2;
+
 	// Use this for initialization
 	void Start () {
 		render = GetComponent<SpriteRenderer> ();
@@ -19,5 +22,7 @@ public class Wall : MonoBehaviour {
 		if(wallHp <= 0){
 			gameObject.SetActive(false);
 		}
+
+		SoundManager.instance.PlayRandomClip (wallHurtClip1,wallHurtClip2);
 	}
 }
